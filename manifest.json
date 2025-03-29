@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YAPEX Vote Verification",
+  "version": "1.0.0",
+  "description": "Securely verify your Kaito votes for the YAPEX secondary marketplace platform",
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "permissions": ["webRequest", "storage"],
+  "host_permissions": [
+    "https://hub.kaito.ai/*",
+    "https://yaps.kaito.ai/*",
+    "https://api.yapex.ai/*"
+  ],
+  "externally_connectable": {
+    "matches": ["https://*.yapex.ai/*", "https://yapex.ai/*"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.yapex.io/*", "https://yapex.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://api.yapex.ai"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "yapex-extension",
+  "version": "1.0.1",
+  "description": "YAPEX Chrome Extension - Secondary marketplace for Kaito voting",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'Building extension...' && npm run copy-icons",
+    "copy-icons": "echo 'This would convert SVG to PNG icons in different sizes'"
+  },
+  "author": "YAPEX",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+} 
