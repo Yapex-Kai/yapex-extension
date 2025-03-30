@@ -85,7 +85,8 @@ chrome.webRequest.onSendHeaders.addListener(
   { 
     urls: [
       "https://hub.kaito.ai/api/v1/yapper/projects",
-      "https://hub.kaito.ai/api/v1/yapper/projects/*/vote-details*"
+      "https://hub.kaito.ai/api/v1/yapper/projects/*/vote-details*",
+      "https://hub.kaito.ai/api/v1/users"
     ]
   },
   ["requestHeaders"]
